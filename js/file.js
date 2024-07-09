@@ -13,9 +13,7 @@ function load(x) {
         if (typeof data == "object") player = data;
         else player = defaultPlayer;
         player = fixValues(player);
-        if (player.version != defaultPlayer.version) {
-            fixOldVersions()
-        }
+        fixOldVersions(); // Hopefully this do weird shit when run all the time
         return
     } catch {player = defaultPlayer; console.log("load unsuccessful for whatever reason or just hard reset")}
 }
