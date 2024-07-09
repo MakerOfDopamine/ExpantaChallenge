@@ -33,8 +33,8 @@ function fixValues(o) {
     if (Array.isArray(o)) {
         for (let i in o) {
             o[i] = fixValues(o[i])
-            return o
         }
+        return o
     }
     
     if (typeof o !== "object") return o
@@ -66,6 +66,12 @@ function fixOldVersions() {
         player = defaultPlayer
         console.log("no version detected, can't fix save")
         return
+    }
+
+    if (player.version == "0.0") {
+        player.buildings = defaultPlayer.buildings
+        player.version = "0.1"
+        console.log("0.0 => 0.1")
     }
 }
 

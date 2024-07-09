@@ -24,7 +24,8 @@
     <div id="mainTab" data-tab="0" class="tab">
         <br>
 
-        <span id="rabbitsText">You have <b id="rabbitsDisplay"></b> rabbits.<br></span>
+        <span id="rabbitsText">You have <b id="rabbitsDisplay"></b> rabbits.</span>
+        <span id="rabbitsPerSecondText">(<b id="rabbitsPerSecondDisplay"></b>/s)</span><br>
         <span id="moneyText">You have <b id="moneyDisplay"></b> gold.</span>
 
         <br><br>
@@ -38,7 +39,23 @@
 
         <br><br>
 
-        coming soon (real™)
+        <div id="rabbitBuildingsSection">
+            <span id="rabbitBuilding1">
+                <span id="rabbitBuilding1Text">You have <b id="rabbitBuilding1Display"></b> catchers.</span><br>
+                <span id="rabbitBuilding1Cost">The next catcher costs <b id="rabbitBuilding1CostDisplay"></b> gold.</span><br>
+                <span id="rabbitBuilding1Effect">Your catchers are catching <b id="rabbitBuilding1EffectDisplay"></b> rabbits per second.</span><br>
+
+                <button id="rabbitBuilding1Button" onclick="buyBuilding(0)">Buy a catcher</button>
+            </span><br><br>
+
+            <span id="rabbitBuilding2">
+                <span id="rabbitBuilding2Text">You have <b id="rabbitBuilding2Display"></b> cages.</span><br>
+                <span id="rabbitBuilding2Cost">The next cage costs <b id="rabbitBuilding2CostDisplay"></b> gold.</span><br>
+                <span id="rabbitBuilding2Effect">Your cages are catching <b id="rabbitBuilding2EffectDisplay"></b> rabbits per second.</span><br>
+
+                <button id="rabbitBuilding2Button" onclick="buyBuilding(1)">Buy a cage</button>
+            </span>
+        </div>
     </div>
 </body>
 </html>
